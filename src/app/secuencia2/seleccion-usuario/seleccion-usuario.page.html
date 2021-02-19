@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-img [src]="img_src" class="image2"></ion-img>
+  <ion-grid fixed class="seleccionUsuario">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-text>
+          <h1>Seleccione usuario</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-top">
+      <ion-col class="ion-text-center">
+        <ion-list>
+          <ion-radio-group >
+            <ion-item *ngFor="let usuario of usuarios">
+              <ion-label>{{usuario}}</ion-label>
+              <ion-radio slot="start" [value]='usuario' (click)="onClick(usuario)"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-group>
+    <ion-button expand="block" class="loginButton" (click)="siguiente()">Siguiente</ion-button>
+    <br>
+    <ion-button expand="block" class="loginButton" routerLink="/login" routerDirection="back">Regresar</ion-button>
+  </ion-item-group>
+</ion-content>

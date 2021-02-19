@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-grid fixed class="login">
+    <ion-img [src]="img_src" class="image"></ion-img>
+    <form [formGroup]="profileForm">
+      <ion-row>
+        <ion-col >
+          <ion-item class="ion-no-padding">
+            <ion-label position="floating">DNI/CEN</ion-label>
+            <ion-input formControlName="dni"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="ion-no-padding">
+            <ion-label position="floating">FECHA DE EMISIÓN</ion-label>
+            <ion-input formControlName="fecha"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+  <ion-item-group>
+    <ion-button expand="block" class="loginButton" (click)="validar()" >Siguiente</ion-button>
+    <br>
+    <ion-button expand="block" class="loginButton" routerLink="/home" routerDirection="back">Regresar</ion-button>
+  </ion-item-group>
+</ion-content>

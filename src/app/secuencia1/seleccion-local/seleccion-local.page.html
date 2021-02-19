@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-grid fixed class="busqueda">
+    <ion-row>
+      <ion-col>
+        <ion-text class="ion-text-center buscar">
+          <h1><b>Seleccione su local de vacunación</b></h1>
+          <h6>La selección de los lugares de vacunación que realices aplicará para todos los usuarios bajo tu cuidado.</h6>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-searchbar showCancelButton="focus" #direc></ion-searchbar>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="getBusqueda(direc.value)" expand="block" fill="clear" shape="round">
+          Buscar
+        </ion-button>
+        
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="getUbicacion()" expand="block" fill="clear" shape="round">
+          Mi ubicación
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div #map id="map"></div>
+  <br>
+  <ion-button expand="block" class="loginButton ion-margin-bottom" routerLink="../espera-confirmacion">Siguiente</ion-button>
+  <ion-button expand="block" class="loginButton" routerLink="/registro-personas" routerDirection="back">Regresar</ion-button>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-text class="ion-text-center recomendacion">
+  <h1><b>Información y Recomendaciones</b></h1>
+</ion-text>
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" class="slider">
+    <ion-slide>
+      <ion-item-group>
+        <ion-img [src]="img_src1" class="graph"></ion-img>
+        <h2 class="titulo"><b>Información sobre la vacuna</b></h2>
+        <h3>Las vacunas contra el COVID-19 le enseñan a tu sistema
+          inmunitario cómo reconocer y combatir el virus; pero esto
+          no evitará que te contagies, sino te ayudará a tener una mejor
+          respuesta frente a la enfermedad.
+        </h3>
+      </ion-item-group>
+    </ion-slide>
+    <ion-slide class="ion-align-items-start">
+      <ion-item-group>
+        <ion-img [src]="img_src2" class="graph"></ion-img>
+        <h2 class="titulo"><b>Efectos secundarios</b></h2>
+        <h3>En su mayoría, los efectos secundarios se presentan dentro de
+          los primeros tres días después de la vacunación, y generalmente
+          sólo duran de uno a dos días.
+        </h3>
+      </ion-item-group>
+    </ion-slide>
+    <ion-slide>
+      <ion-item-group>
+        <ion-img [src]="img_src3" class="graph"></ion-img>
+        <h2 class="titulo"><b>Recomendaciones</b></h2>
+        <h3>Sigue practicando el distanciamiento físico, colócate la
+          mascarilla de manera apropiada, lávate las manos con frecuencia,
+          y sigue las recomendaciones locales y estatales hasta que la
+          trasmisión del virus haya terminado.
+        </h3>
+        <ion-button expand="block" class="loginButton" routerLink="/home" routerDirection="back">Cerrar sesión</ion-button>
+      </ion-item-group>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

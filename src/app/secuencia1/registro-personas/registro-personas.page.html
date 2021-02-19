@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-grid fixed class="login">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-text>
+          <h1><b>¿Tienes personas bajo tu cuidado?</b></h1>
+          <h5>Adultos Mayores / Niños / Discapacitados</h5>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-top">
+      <ion-col class="ion-text-center">
+        <form [formGroup]="profileForm">
+          <div formArrayName="personasCargo">
+            <!--Este es el elemento que se va a repetir-->
+            <ion-item class="ion-no-padding ion-margin-bottom" *ngFor="let persona of personasCargo.controls; let i = index">
+              <ion-input placeholder="Ingrese DNI" [formControlName]="i"></ion-input>
+            </ion-item>
+            <ion-icon name="add-circle-outline" (click)="agregar()"></ion-icon>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-group>
+    <ion-button expand="block" class="loginButton" (click)="onSubmit()" routerLink="./seleccion-local">Siguiente</ion-button>
+    <br>
+    <ion-button expand="block" class="loginButton" routerLink="/registro" routerDirection="back">Regresar</ion-button>
+  </ion-item-group>
+</ion-content>

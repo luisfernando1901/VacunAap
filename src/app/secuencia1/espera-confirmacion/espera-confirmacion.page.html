@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-img [src]="img_src" class="image"></ion-img>
+  <ion-grid fixed class="login">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-text>
+          <h5>Su local de vacunación aún no ha sido designada, una vez terminado el proceso de distribución se le notificara por correo/SMS.</h5>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-group>
+    <ion-button expand="block" class="loginButton" routerLink="/home" (click)="aceptada()" routerDirection="back">Cerrar sesión</ion-button>
+  </ion-item-group>
+</ion-content>

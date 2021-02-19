@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" class="slider">
+    <ion-slide class="ion-align-items-center">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-text>
+              <h1><b>Vacunados hasta la fecha segun distrito</b></h1>
+            </ion-text>
+            <ion-img [src]="img_src" class="graph"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-text-center">
+            <ion-text>
+              <h5>x% de los peruanos ya puso el hombro. Ahora te toca a ti.</h5>
+            </ion-text>
+            <br>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="ion-align-items-center">
+      <ion-item-group class="ion-align-items-center">
+        <h2 class="titulo"><b>¿Presentas o has presentado signos y síntomas después de vacunarte?</b></h2>
+        <ion-item-group class="ion-text-center">
+          <ion-button expand="block" class="loginButton" routerLink="/signos-sintomas">Si</ion-button>
+          <ion-button expand="block" class="loginButton" routerLink="/recomendaciones">No, estoy bien</ion-button>
+        </ion-item-group>
+      </ion-item-group>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
